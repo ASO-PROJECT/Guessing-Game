@@ -5,12 +5,12 @@ const min = 1,
 let n = Math.floor(Math.random() * (max - min + 1) + min);
 console.log(n);
 
-const generateRandom = (min, max) => {
+const randomNumber = (min, max) => {
   n = Math.floor(Math.random() * (max - min + 1) + min);
   console.log(n);
   return n;
 };
-// generateRandom(min, max);
+// randomNumber(min, max);
 // Declare score and high score values
 let score = 10,
   highScore = 0;
@@ -34,7 +34,7 @@ const reset = () => {
   input.value = null;
   // Update the score
   document.getElementById("score").innerHTML = 10;
-  generateRandom(min, max);
+  randomNumber(min, max);
   displayMessage("Start guessing...");
 };
 

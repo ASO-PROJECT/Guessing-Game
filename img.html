@@ -3,26 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ta5min Sora</title>
+    <title>Ta5min Kemara</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.js"></script>
+    <link rel="shortcut icon" href="img/who.ico" type="image/x-icon" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   </head>
-  <body class="flex-box flex-col">
+  <body class="flex flex-col bg-primary-background h-screen">
     <div
-      class="flex-box bg-primary-background rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl h-dvh flex-col"
+      class="flex flex-col items-center justify-center bg-primary-background rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl h-dvh"
     >
-      <h1>Guessing Image Game</h1>
-      <label for="guess">Guess number between 1 & 10</label>
-      <input type="number" name="guess" id="guess" />
-      <div class="flex-box">
-        <button id="check" type="submit">Check</button>
-        <button id="reset" type="submit" onclick="reset()">Reset</button>
+      <h1 class="text-3xl font-bold mb-4">Guessing Image Game</h1>
+
+      <button
+        type="button"
+        class="bg-slate-100 font-semibold transition ease-linear text-slate-700 py-3 px-6 hover:bg-slate-300 rounded-lg cursor-pointer inline-flex items-center justify-center text-center"
+        onclick="randomImage()"
+      >
+        <i data-lucide="play" class="w-4 h-4 mr-2 text-black"></i>
+
+        Start Guessing Top Thinkers In AI And ML
+      </button>
+
+      <img id="image" alt="thinker" class="w-48 h-auto rounded-lg mb-4" />
+      <div class="flex space-x-4">
+        <button
+          id="Ng"
+          onclick="ng()"
+          class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+        >
+          Andrew Ng
+        </button>
+        <button
+          id="Bengio"
+          onclick="bengio()"
+          class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+        >
+          Yoshua Bengio
+        </button>
+        <button
+          id="LeCun"
+          onclick="lecun()"
+          class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+        >
+          Yann LeCun
+        </button>
+        <button
+          id="Hassabis"
+          onclick="hassabis()"
+          class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+        >
+          Demis Hassabis
+        </button>
+        <button
+          id="Hinton"
+          onclick="hinton()"
+          class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+        >
+          Geoffrey Hinton
+        </button>
+        <button
+          id="Li"
+          onclick="li()"
+          class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"
+        >
+          Fei-Fei Li
+        </button>
+        <!-- <button id="reset" onclick="reset()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded">
+          Reset
+        </button> -->
       </div>
 
-      <p id="message">Start guessing...</p>
-      <p class="score">💯Score: <span id="score">10</span></p>
-      <p class="highscore">🏆HighScore: <span id="highscore">0</span></p>
+      <p id="message" class="text-lg mt-4">Start guessing...</p>
+      <p class="text-lg mt-4">💯Score: <span id="score">0</span></p>
+      <p class="text-lg mt-2">🏆HighScore: <span id="highscore">0</span></p>
     </div>
 
-    <script src="game.js"></script>
+    <script src="img.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>

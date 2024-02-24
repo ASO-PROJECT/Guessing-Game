@@ -5,24 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ta5min Ra9m</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="flex-box flex-col">
-    <div
-      class="flex-box bg-primary-background rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl h-dvh flex-col"
-    >
-      <h1>Guessing Number Game</h1>
-      <label for="guess">Guess number between 1 & 10</label>
-      <input type="number" name="guess" id="guess" />
-      <div class="flex-box">
-        <button id="check" type="submit">Check</button>
-        <button id="reset" type="submit" onclick="reset()">Reset</button>
-      </div>
+    <link rel="stylesheet" href="tailwind.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.js"></script>
+    <link rel="shortcut icon" href="img/which.ico" type="image/x-icon">
 
-      <p id="message">Start guessing...</p>
-      <p class="score">💯Score: <span id="score">10</span></p>
-      <p class="highscore">🏆HighScore: <span id="highscore">0</span></p>
+  </head>
+  <body
+    class="flex flex-col items-center justify-center min-h-screen bg-gray-100 bg-primary-background"
+  >
+    <div
+      class="bg-primary-background rounded-lg shadow-xl p-6 w-full max-w-md mx-auto space-y-4"
+    >
+      <h1 class="text-2xl font-semibold text-center text-primary-foreground">Guessing Number Game</h1>
+      <label for="guess" class="block text-sm font-medium text-primary-foreground">
+        Guess number between 1 & 10
+      </label>
+      <input
+        type="number"
+        name="guess"
+        id="guess"
+        class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
+      />
+      <div class="flex space-x-2">
+        <button
+          id="check"
+          type="submit"
+          class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md focus:outline-none focus:ring focus:ring-indigo-200"
+        >
+          Check
+        </button>
+        <button
+          id="reset"
+          type="submit"
+          onclick="reset()"
+          class="bg-background hover:bg-background text-primary-foreground px-4 py-2 rounded-md focus:outline-none focus:ring focus:ring-gray-200"
+        >
+          Reset
+        </button>
+        <!-- Theme toggler button -->
+        <button
+          id="themeToggle"
+          onclick="themeToggler()"
+          class="bg-background hover:bg-background text-primary-foreground px-4 py-2 rounded-md focus:outline-none focus:ring focus:ring-gray-200"
+        >
+          Toggle Theme
+        </button>
+      </div>
+      <p id="message" class="text-center text-primary-foreground">Start guessing...</p>
+      <p class="text-center text-green-500 font-semibold">
+        💯Score: <span id="score">10</span>
+      </p>
+      <p class="text-center text-yellow-500 font-semibold">
+        🏆HighScore: <span id="highscore">0</span>
+      </p>
     </div>
 
     <script src="game.js"></script>
+    <script src="theme.js"></script>
   </body>
 </html>
