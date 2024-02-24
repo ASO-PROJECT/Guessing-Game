@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ta5min Sora</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex-box flex-col">
+    <div
+      class="flex-box bg-primary-background rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl h-dvh flex-col"
+    >
+      <h1>Guessing Image Game</h1>
+      <label for="guess">Guess number between 1 & 10</label>
+      <input type="number" name="guess" id="guess" />
+      <div class="flex-box">
+        <button id="check" type="submit">Check</button>
+        <button id="reset" type="submit" onclick="reset()">Reset</button>
+      </div>
+
+      <p id="message">Start guessing...</p>
+      <p class="score">💯Score: <span id="score">10</span></p>
+      <p class="highscore">🏆HighScore: <span id="highscore">0</span></p>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

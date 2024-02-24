@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Salam</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.js"></script>
+    <!-- Development version -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    <div
+      class="flex-box bg-primary-background rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl h-dvh"
+    >
+      <h1 class="text-3xl font-bold text-primary-foreground">Salam World</h1>
+      <button onclick="themeToggler()" class="text-primary-foreground">
+        Toggle theme
+      </button>
+      <!-- <img src="ai.jpg" alt="ai" /> -->
+      <img src="brainai.png" alt="ai" />
+      <div
+        class="typewrite text-primary-foreground"
+        data-period="2000"
+        data-type='[ "Hi, Im Clever.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'
+      >
+        <span class="wrap"></span>
+      </div>
+      <button
+        class="text-clifford cursor-pointer inline-flex transition ease-linear items-center justify-center py-3 px-6 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700"
+        id="btn"
+        onclick="randomNbr()"
+      >
+        <i data-lucide="shuffle" class="w-4 h-4 mr-2"></i>
+        Generate Random Number
+      </button>
+      <a href="game.html">
+        <button
+          type="button"
+          class="bg-slate-100 font-semibold transition ease-linear text-slate-700 py-3 px-6 hover:bg-slate-300 rounded-lg cursor-pointer inline-flex items-center justify-center text-center"
+        >
+          <i data-lucide="play" class="w-4 h-4 mr-2"></i>
+
+          Play Guessing Game
+        </button></a
+      >
+    </div>
+
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+    <script src="typewriter.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

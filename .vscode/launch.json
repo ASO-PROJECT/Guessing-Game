@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    
+    
+    {
+      "type": "msedge",
+      "name": "index page",
+      "request": "launch",
+      "url": "http://127.0.0.1:3000/index.html"
+    }
+  ]
+}
