@@ -13,9 +13,11 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="shortcut icon" href="img/hello.ico" type="image/x-icon" />
   </head>
-  <body>
+  <body
+    class="flex flex-col items-center justify-center min-h-screen bg-gray-100 bg-primary-background"
+  >
     <div
-      class="flex-box bg-primary-background rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl h-dvh"
+      class="flex-col bg-primary-background rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl h-dvh"
     >
       <h1 class="text-3xl font-bold text-primary-foreground">Salam World</h1>
       <button onclick="themeToggler()" class="text-primary-foreground">
@@ -45,7 +47,17 @@
         >
           <i data-lucide="play" class="w-4 h-4 mr-2"></i>
 
-          Play Guessing Game
+          Play Guessing Number
+        </button></a
+      >
+      <a href="img.html">
+        <button
+          type="button"
+          class="bg-slate-100 font-semibold transition ease-linear text-slate-700 py-3 px-6 hover:bg-slate-300 rounded-lg cursor-pointer inline-flex items-center justify-center text-center"
+        >
+          <i data-lucide="play" class="w-4 h-4 mr-2"></i>
+
+          Play Guessing Image
         </button></a
       >
     </div>
